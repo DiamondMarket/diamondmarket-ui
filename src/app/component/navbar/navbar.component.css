@@ -5,12 +5,16 @@ img {
 }
 
 .dropdown-menu.show {
-    background: #343a40ea;
+    background: #343a409c;
     color: white;
     text-align: center;
     left: auto;
     right: 20px;
-    margin-right: -10px;
+    margin-right: 10px;
+}
+
+.dropdown-item {
+    color: black!important;
 }
 
 .nav-link.dropdown-toggle {

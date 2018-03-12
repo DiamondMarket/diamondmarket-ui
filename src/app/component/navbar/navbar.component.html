@@ -14,15 +14,19 @@
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <li class="navbar-nav ml-auto">
-        <img [src]="userDetailService.user.image">
+        <img *ngIf="userDetailService.user.image" [src]="userDetailService.user.image">
+        <img *ngIf="!userDetailService.user.image" src='../../../assets/default-image.jpg'>
       </li>
       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
         aria-expanded="false">
         {{userDetailService.user.userName}}
       </a>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <i class="fas fa-sign-out-alt"></i>
-        <a (click)="logout()">Sign out</a>
+        <a class="dropdown-item" routerLink="/home/profile">View Profile</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" (click)="logout()">
+          <i class="fas fa-sign-out-alt"></i> Sign out
+        </a>
       </div>
     </form>
   </div>

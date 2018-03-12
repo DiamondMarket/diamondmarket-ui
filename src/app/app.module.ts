@@ -19,6 +19,7 @@ import {
 } from "angular5-social-login";
 import { HomeComponent } from './component/home/home.component';
 import { UserDetailService } from './service/user-detail.service';
+import { ProfileComponent } from './component/profile/profile.component';
 
 export function getAuthServiceConfigs() {
   let config = new AuthServiceConfig(
@@ -42,7 +43,8 @@ export function getAuthServiceConfigs() {
     NavbarComponent,
     LoginComponent,
     SignupComponent,
-    HomeComponent
+    HomeComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
