@@ -1,0 +1,38 @@
+<div style="height:150px"></div>
+<div class="row" id="login-form-container">
+  <div class="col-md-4"></div>
+  <div class="col-md-4 card">
+    <h2>Sign in</h2>
+   
+      <input type="submit" type="button" (click)="socialSignIn('facebook')"class="btn btn-primary" value="Sign in with Facebook">
+    <br>
+      <input type="submit" type="button" (click)="socialSignIn('google')"class="btn btn-danger" value="Signin in with Google">
+
+    <!-- <div>
+      <button (click)="socialSignIn('facebook')">Sign in with Facebook</button>
+    </div>
+    <div>
+      <button (click)="socialSignIn('google')">Signin in with Google</button>
+    </div> -->
+    <div class="form-group">
+      <label>User Name</label>
+      <input name="userName" type="text" [(ngModel)]="user.userName" class="form-control" />
+    </div>
+    <div class="form-group">
+      <label id="password">Password</label>
+      <input name="password" type="password" [(ngModel)]="user.password" class="form-control" />
+    </div>
+    <div>
+      <div>
+        <input type="submit" type="button" class="btn btn-primary" value="Sign in">
+      </div>
+      <label>Don't have an account?
+        <a routerLink="/signup" routerLinkActive="active">Sign up</a>
+      </label>
+    </div>
+    <div class="text-danger">
+      <span>{{message}}</span>
+    </div>
+  </div>
+  <div class="col-md-4"></div>
+</div>
