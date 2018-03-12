@@ -1,0 +1,14 @@
+<h3>Profile</h3>
+<div class="row">
+  <div class="col-md-5">
+    Username {{this.userDetailService.user.userName}}<br>
+    Email {{this.userDetailService.user.email}}<br>
+    Provider {{this.userDetailService.user.provider}}
+  </div>
+  <img *ngIf="userDetailService.user.image" [src]="userDetailService.user.image">
+  <img *ngIf="!userDetailService.user.image" src='../../../assets/default-image.jpg'>
+  <div class="fileUpload btn btn-sm btn-primary">
+    <span>Upload new photo?</span>
+    <input type="file" class="upload" />
+  </div>
+</div>
